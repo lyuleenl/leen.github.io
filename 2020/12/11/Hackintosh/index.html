@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>
+        Hackintosh |
+        
+        Leen&#39;Blog
+    </title>
+    <link rel="shortcut icon" href="/">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":false,"number":true,"expand_all":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.png","img_position":"left","left_side_width":"260px","content_max_width":"900px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"version":"3.0.4"};
+    KEEP.language = {"search":"Search...","prev":"Prev","next":"Next","prev_posts":"Prev posts","next_posts":"Next posts","page":"Page %d","recent_posts":"Recent Posts","share":"Share","powered_by":"Powered by %s","theme":"Theme","rss_feed":"RSS Feed","category":"Category","categories":"Categories","tag":"Tag","tags":"Tags","tagcloud":"Tag Cloud","comment":"Comment","home":"Home","archive":"Archive","archives":"Archives","about":"About","site_uv":"Visitor Count","site_pv":"Totalview","links":"Links","link":"Link","top":"TOP","read_more":"Read more","wordcount":"Words","min2read":"Mins","changelog":"Changelog","copyright":{"author":"Post author","title":"Post title","link":"Post link","create_time":"Create time","license_title":"Copyright Notice","license_content":"All articles in this blog are licensed under %s unless stating additionally."},"ago":{"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"}};
+  </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+<div class="page-container">
+
+    
+
+    <header class="page-header">
+        <div class="header-progress"></div>
+    </header>
+
+    <main class="page-main">
+
+        <div class="page-main-content">
+
+            <div class="page-main-content-top">
+                <header class="header-wrapper">
+
+    <div class="header-content">
+        <a class="logo-title" href="/">
+            Leen&#39;Blog
+        </a>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/"
+                    >
+                        HOME
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/archives"
+                    >
+                        ARCHIVES
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/about"
+                    >
+                        ABOUT
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+            </div>
+
+            <div class="page-main-content-middle">
+
+                <main class="main-content normal-code-theme">
+
+                    
+                        <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title" align="center">
+            <span class="title-hover-animation">Hackintosh</span>
+        </div>
+
+        <!-- 自定义 -->
+        <div class="meta-info" align="center">
+            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-calendar"></i> 2020-12-11 15:30:16
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/tags/hackintosh/">hackintosh</a>
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/efi/">efi</a>
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%B3%BB%E7%BB%9F/">系统</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i> <span>3.3k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i> <span>13 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+        </div>
+        <!-- end -->
+        
+            <!-- <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span>Leen Yu</span>
+                        <span class="level">Lv1</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-calendar"></i> 2020-12-11 15:30:16
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/tags/hackintosh/">hackintosh</a>
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/efi/">efi</a>
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%B3%BB%E7%BB%9F/">系统</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i> <span>3.3k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i> <span>13 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i> <span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div> -->
+        
+
+        <div class="article-content markdown-body">
+            <p>macintosh 麦金塔</p>
+<h1 id="Issue"><a href="#Issue" class="headerlink" title="Issue"></a>Issue</h1><ul>
+<li><p>黑苹果 屏幕亮度</p>
+</li>
+<li><p>win下关机变重启</p>
+<p>打开 config.plist 文件并勾选 Acpi 部分的 FixShutdown 选项解决的</p>
+</li>
+<li><p>随航问题  目前高度怀疑是核显没激活</p>
+</li>
+</ul>
+<p>BIOS 中设置主显卡为独显 (PCIE) 并且设置 DVMT 为 128M，以便独显、核显并存</p>
+<p>enabling “Above 4G Decoding.”</p>
+<p>bios设置主显卡为核显才能启动随航。</p>
+<ul>
+<li>引导界面多余选项</li>
+</ul>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.daliansky.net/OpenCore-BootLoader.html" >https://blog.daliansky.net/OpenCore-BootLoader.html<i class="fas fa-external-link-alt"></i></a>  find: Boot: 引导界面的设置</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.mfpud.com/topics/2984/" >https://www.mfpud.com/topics/2984/<i class="fas fa-external-link-alt"></i></a>   删除macOS黑苹果系统四叶草引导Clover启动界面的多余启动硬盘项</p>
+<p>misc-security-scan policy 改为983299   Hideself改成TRUE</p>
+<h1 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h1><ul>
+<li>配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cpu: i7 8700 coffee lake</span><br><span class="line">graphics: MAXSUN RX580 2304 Polaris</span><br><span class="line">motherboard: Asus Z390-A</span><br><span class="line">ram: Micron 8g X2</span><br><span class="line">rom: WD sn550 500g X2</span><br></pre></td></tr></table></figure></li>
+<li>BIOS 设置</li>
+</ul>
+<p><code>禁用</code></p>
+<table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fast Boot</td>
+<td>快速启动</td>
+</tr>
+<tr>
+<td>CFG Lock (MSR 0xE2 write protection)</td>
+<td>CFG 锁 (MSR 0xE2 写入保护)</td>
+</tr>
+<tr>
+<td>VT-d</td>
+<td><a class="link"   target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/495526512.html" >VT-d<i class="fas fa-external-link-alt"></i></a></td>
+</tr>
+<tr>
+<td>CSM</td>
+<td>兼容性支持模块</td>
+</tr>
+<tr>
+<td>Intel SGX</td>
+<td>Intel SGX</td>
+</tr>
+</tbody></table>
+<p><code>启用</code></p>
+<table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VT-x</td>
+<td><a class="link"   target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/495526512.html" >VT-x<i class="fas fa-external-link-alt"></i></a></td>
+</tr>
+<tr>
+<td>Above 4G decoding</td>
+<td>大于 4G 地址空间解码</td>
+</tr>
+<tr>
+<td>Hyper Threading</td>
+<td>处理器超线程</td>
+</tr>
+<tr>
+<td>Execute Disable Bit</td>
+<td>执行禁止位</td>
+</tr>
+<tr>
+<td>EHCI/XHCI Hand-off</td>
+<td>接手 EHCI/XHCI 控制</td>
+</tr>
+<tr>
+<td>OS type: Other</td>
+<td>操作系统类型: Other</td>
+</tr>
+<tr>
+<td>Legacy RTC Device</td>
+<td>传统 RTC 设备</td>
+</tr>
+<tr>
+<td>restore on ac power loss</td>
+<td>通电自启</td>
+</tr>
+<tr>
+<td>打开 Ahci 选项</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="引导介绍"><a href="#引导介绍" class="headerlink" title="引导介绍"></a>引导介绍</h1><h2 id="EFI-文件结构"><a href="#EFI-文件结构" class="headerlink" title="EFI 文件结构"></a>EFI 文件结构</h2><p>打开下载好的最新版 OC，把 Doc 文件夹下面的 Sample.plist 改名为 config.plist，并把此文件移动到 EFI 目录下面。</p>
+<p><code>EFI-OC-Kexts</code></p>
+<p>打开 Kexts，我们把常用的一些 kexts 先放进去，一般情况下你需要放如下 Kexts:</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lilu.kext</td>
+<td>Acidanthera驱动全家桶的SDK</td>
+</tr>
+<tr>
+<td>Applealc.kext</td>
+<td>声卡驱动</td>
+</tr>
+<tr>
+<td>VirtualSMC.kext</td>
+<td>传感器驱动依赖</td>
+</tr>
+<tr>
+<td>SMCProcessor.kext</td>
+<td>CPU核传感器</td>
+</tr>
+<tr>
+<td>SMCSuperIO.kext</td>
+<td>IO传感器</td>
+</tr>
+<tr>
+<td>WhateverGreen.kext</td>
+<td>显卡驱动</td>
+</tr>
+<tr>
+<td>IntelMausi.kext</td>
+<td>Intel类千兆网卡驱动</td>
+</tr>
+<tr>
+<td>Usbinjectall.kext</td>
+<td>USB驱动（你也可以定制自己的USB补丁）</td>
+</tr>
+<tr>
+<td>NVMeFix.kext</td>
+<td>为NVME硬盘增加ASPT属性来保证节电，虽然对台式机没啥用，但是官方推荐所有NVME用户都使用此补丁</td>
+</tr>
+</tbody></table>
+<p><code>EFI-OC-Drives</code></p>
+<p>打开Drives,里面的驱动介绍如下：</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>解析</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HfsPlus.efi</td>
+<td>用于HFS格式文件系统，这是必须加载的。</td>
+</tr>
+<tr>
+<td>OpenRuntime.efi</td>
+<td>内存运用等必要的插件，必须加载。</td>
+</tr>
+<tr>
+<td>MemoryAllocation.efi</td>
+<td>为 Z390/X99 等主板预留第一组 512MB 内存, 帮助引导工具注入内核以及内核缓存至第一组 512MB 内存, 需要配合 FwRuntimeServices 和引导标识符 <code>slide=1</code> <a class="link"   target="_blank" rel="noopener" href="https://blog.daliansky.net/OpenCore-BootLoader.html" >参考<i class="fas fa-external-link-alt"></i></a></td>
+</tr>
+<tr>
+<td>OpenCanopy.efi</td>
+<td>加载第三方开机主题。(目前没有主题)</td>
+</tr>
+</tbody></table>
+<p>这个安装阶段中,要确保是从硬盘启动而不是 u盘. 从 u 盘启动将会重新开始最初的安装过程.</p>
+<p>注：如果用的第三方制作的镜像，EFI分区可能已经有了EFI文件夹，请删除EFI分区内的所有文件后将你的EFI文件夹拖入到EFI分区</p>
+<p>they released ACPI patch for our hacks to get native NVRAM (like older motherboards, only difference is in that we need additional .aml file in our EFIs). </p>
+<p>U盘写好系统后,打开DiskGenius,把自己型号的clover复制到U盘的EFI文件夹替换原clover[^1]</p>
+<ul>
+<li>官方支持的其他文件</li>
+</ul>
+<p><strong>*<code>drivers</code>*文件夹下</strong></p>
+<p><code>AppleUsbKbDxe.efi</code></p>
+<blockquote>
+<p>这个驱动是给使用模拟 UEFI 的老主板在 OpenCore 界面正常输入用的, 请勿在 Ivy Bridge (3 代酷睿)及以上的主板上使用 (详见 vit9696 的解释)</p>
+</blockquote>
+<p><code>NvmExpressDxe.efi</code></p>
+<blockquote>
+<p>用于在 Haswell (4 代酷睿) 或更老的主板上支持 NVMe 硬盘, 新主板不需要</p>
+</blockquote>
+<p><code>XhciDxe.efi</code></p>
+<blockquote>
+<p>用于给 Sandy Bridge (2 代酷睿) 或更老的主板上支持 XHCI, 新主板不需要</p>
+</blockquote>
+<p><code>HiiDatabase.efi</code></p>
+<blockquote>
+<p>用于给 Ivy Bridge (3 代酷睿) 或更老代主板上支持 UEFI 字体渲染, UEFI Shell 中文字渲染异常时使用, 新主板不需要</p>
+</blockquote>
+<p><code>AudioDxe.efi</code>  </p>
+<blockquote>
+<p>开机UEFI界面若需要声音效果需要加载。</p>
+</blockquote>
+<p><code>CrScreenshotDxe.efi </code></p>
+<blockquote>
+<p>开机UEFI的截图工具。</p>
+</blockquote>
+<p><code>OpenUsbKbDxe.efi </code></p>
+<blockquote>
+<p>给使用模拟 UEFI 的老主板在 OpenCore 界面正常输入用的, 请勿在 Ivy Bridge (3 代酷睿)及以上的主板上使用。</p>
+</blockquote>
+<p><code>Ps2KeyboardDxe.efi</code></p>
+<blockquote>
+<p>PS2键盘所需插件。</p>
+</blockquote>
+<p><code>Ps2MouseDxe.efi </code></p>
+<blockquote>
+<p>PS2鼠标所需插件。</p>
+</blockquote>
+<p><code>UsbMouseDxe.efi </code></p>
+<blockquote>
+<p>当MacOS被安装在虚拟机上所需要的鼠标插件。</p>
+</blockquote>
+<p><code>ACPIBatteryManager.kext</code></p>
+<blockquote>
+<p>电源管理驱动</p>
+</blockquote>
+<p><strong><em><code>tools</code></em></strong> <strong>文件夹下</strong></p>
+<p><code>BootKicker.efi</code></p>
+<blockquote>
+<p>调用苹果原生的引导切换 GUI, 黑苹果不支持</p>
+</blockquote>
+<p><code>CleanNvram.efi</code></p>
+<blockquote>
+<p>OpenCore 自带的 NVRAM 清理功能已经足够我们使用</p>
+</blockquote>
+<p><code>GopStop.efi</code></p>
+<blockquote>
+<p>停止显卡 GOP, 排错时使用</p>
+</blockquote>
+<p><code>HdaCodecDump.efi</code></p>
+<blockquote>
+<p>导出声卡 Codec, 可用于定制声卡, 需要时可以临时加回来</p>
+</blockquote>
+<p><code>VerifyMsrE2.efi</code></p>
+<blockquote>
+<p>用于检查主板上 CFG 锁的状态</p>
+</blockquote>
+<p><img src="http://7.daliansky.net/OpenCore/Structure.png" alt="EFI文件结构"></p>
+<p>现在, 我们可以把 AppleSupportPkg 中必需的 .efi 驱动程序放入 Drivers 文件夹, 将 你的 kext 和 DSDT/SSDT 放入各自的文件夹中。请注意, OpenCore 不支持支持列表以外的 UEFI 驱动程序!</p>
+<h2 id="config-plist介绍"><a href="#config-plist介绍" class="headerlink" title="config.plist介绍"></a>config.plist介绍</h2><p><strong>PollAppleHotKeys:</strong> <code>YES</code></p>
+<p>设置为 YES 后允许在<strong>引导过程</strong>中使用苹果原生快捷键, 需要与 Quirk KeySupport=Yes 结合使用, 具体体验取决于主板固件。</p>
+<p>快捷键组合:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Cmd + V: 启用 -v 跑码</span><br><span class="line">Cmd + Opt + P + R: 重置 NVRAM</span><br><span class="line">Cmd + R: 启动恢复分区</span><br><span class="line">Cmd + S: 启动至单用户模式</span><br><span class="line">Option &#x2F; ALT: 在 ShowPicker 设置成 NO 时显示引导项选择界面, ALT 不可用时可用 ESC 键代替</span><br><span class="line">Cmd + C + 减号: 关闭主板兼容性检查, 等同于添加引导标识符 -no_compat_check</span><br><span class="line">Shift: 安全模式</span><br></pre></td></tr></table></figure>
+<h1 id="安装原理"><a href="#安装原理" class="headerlink" title="安装原理"></a>安装原理</h1><h2 id="使用的软件"><a href="#使用的软件" class="headerlink" title="使用的软件"></a>使用的软件</h2><p> clover 引导启动系统<br> opencore 引导启动系统</p>
+<h2 id="系统引导原理"><a href="#系统引导原理" class="headerlink" title="系统引导原理"></a>系统引导原理</h2><ol>
+<li>白苹果： 电脑加电 → 启动 Mac 的 UEFI Bios → 加载 NVRAM → 进入 macOS</li>
+<li>clover: 电脑加电 → 加载四叶草的 EFI 微系统 → 模拟白果的 EFI 和加载参数 → 进入 macOS</li>
+<li>Ozmosis：电脑加电 → 启动 Ozmosis 模拟的 Mac 的 Uefi Bios → 加载 NVRAM → 进入 macOS</li>
+</ol>
+<p>Clover的引导方式是通过用户创建EFI分区来引导仿冒的设备信息，从而实现系统的安装，但是由于Clover是通过仿冒白苹果机型来完成安装，所以必须要求所安装的黑苹果硬件和白苹果相似。</p>
+<p>opencore引导是clover的升级版，它相较于Clover的最大优势就是，它在mac升级系统的时候只需要升级kexts驱动文件即可，不必要升级OC引导本身</p>
+<p>Oz（<a class="link"   target="_blank" rel="noopener" href="http://imacosx.com/scb/1886.html" >Ozmosis<i class="fas fa-external-link-alt"></i></a>）引导，通过将BIOS刷成和白果一样达到完美效果，不过这种方法兼容性差，容易把主板刷报废，目前已经不更新了。</p>
+<h1 id="收集的一些坑经验"><a href="#收集的一些坑经验" class="headerlink" title="收集的一些坑经验"></a>收集的一些<del>坑</del>经验</h1><p>分区文件DiskGenius  下一个稳定版本的 不然很容易报错<br>TransMac 这个软件 下一个绿色版的 试用版的容易出错  我就是出错了 然后就挂了 又一次下载镜像   建议使用 balenaEtcher</p>
+<blockquote>
+<p>Every motherboard has NVRAM, but Intel 300 series (except z370) like B360, Z390, H370, etc. has other implementation of it that previous motherboards and that’s why we needed emulated nvram for nice hackintoshy stuff.<br>they released ACPI patch for our hacks to get native NVRAM (like older motherboards, only difference is in that we need additional .aml file in our EFIs). (<a class="link"   target="_blank" rel="noopener" href="https://www.reddit.com/r/hackintosh/comments/ercqom/native_nvram_on_z390_possible/" >https://www.reddit.com/r/hackintosh/comments/ercqom/native_nvram_on_z390_possible/<i class="fas fa-external-link-alt"></i></a>)</p>
+</blockquote>
+<p>所有AMD免驱显卡均建议搭配Lilu.kext和WhateverGreen.kext使用，以避免启动黑屏、流处理器被部分禁用、显存不识别等毛病，其它原因同NVIDIA显卡；</p>
+<p>AMD 显卡在黑苹果中免驱，指的是只要把这个显卡插上，搭配 WhateverGreen.kext （下称“WEG”）的情况下 macOS 就能识别出对应的型号，并提供基础性能驱动。其实这个时候，WEG 仅仅只是调用了针对某一核心架构的通用驱动，例如 RX470/RX570/RX580 核心都是 Polaris，RX5500/RX5600/RX5700XT 核心都是 Navi，WEG 分别调用了针对某一核心的通用驱动，实现了基本驱动和基本性能。</p>
+<p>但是。这里要说但是了。</p>
+<p>这样的驱动并不能发挥显卡最大的性能，举几个实际案例：在 Geekbench 的性能测试中，Radeon VII 的得分仅为 5-6 万分，而在 Windows 上可以轻松达到 8.2 万分以上；Radeon RX 5700XT 的 Metal 性能得分大概是 3.8 万分左右，而在解决这个问题后能轻松跑到 6.4 万分以上（macOS 10.15.4 以后能达到 7 万分以上），并且在超频后差距更大。<br><em>称为 SMU 的固件（SMU Firmware）</em>  针对这个情况，可以使用由 @CMMChris 开发的第三方驱动 RadeonBoost.kext<br>如果使用后黑屏，请添加 adgpmod=pikera 这个启动参数</p>
+<p>参考：</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://heipg.cn/tutorial/graphic-card-for-macos-2020.html" >2020年黑苹果macOS Catalina显卡支持列表，持续更新中<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://heipg.cn/tutorial/fix-smu-firmware-for-radeon.html" >修复SMU固件引起的显卡问题<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="常见问题及解决方案"><a href="#常见问题及解决方案" class="headerlink" title="常见问题及解决方案"></a>常见问题及解决方案</h2><h3 id="MacOS-与-Windows-时间不一致"><a href="#MacOS-与-Windows-时间不一致" class="headerlink" title="MacOS 与 Windows 时间不一致"></a>MacOS 与 Windows 时间不一致</h3><p>Windows 管理员运行cmd 输入命令：Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</p>
+<p>原因：Windows 与Mac计算时间方式不同，Windows直接读取UTF时间，Mac自动UTF+8</p>
+<h3 id="开机显示American-Megatrends"><a href="#开机显示American-Megatrends" class="headerlink" title="开机显示American Megatrends"></a>开机显示American Megatrends</h3><img src="https://img2020.cnblogs.com/blog/2130168/202011/2130168-20201112090556500-1003078245.jpg" width = "50%" />
+
+<p>config.plist-&gt;NVRAM-&gt;Add-&gt;7C436110-AB2A-4BBB-A880-FE41995C9F82-&gt;boot-args<br>添加字段  rtcfx_excloud=80-FF  从00-FF 自己试</p>
+<h3 id="Open-Core-默认选项无法修改"><a href="#Open-Core-默认选项无法修改" class="headerlink" title="Open Core 默认选项无法修改"></a>Open Core 默认选项无法修改</h3><p>Apple -&gt; System Preferences -&gt; Startup Disk  设置MacOS 启动盘为启动项<br>在 Open Core 中选择你想设为默认的系统 Ctrl+Enter 即可</p>
+<h3 id="bios-黑屏-可正常进系统"><a href="#bios-黑屏-可正常进系统" class="headerlink" title="bios 黑屏 可正常进系统"></a>bios 黑屏 可正常进系统</h3><p>clean nvram 即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Hi, i&#39;m back. I cleaned the NVRAM, after that I accidentally pushed the &quot;del&quot; key and the BIOS page has appeared.</span><br><span class="line"></span><br><span class="line">Im theory yes CMD + ALT + P + R, but I use OpenCore as boot loader and there is an option for that.</span><br><span class="line"></span><br><span class="line">You can try using terminal:</span><br><span class="line"></span><br><span class="line">sudo nvram -c</span><br><span class="line"></span><br><span class="line">sudo shutdown -r now</span><br><span class="line"></span><br><span class="line">Restart the PC and try to access BIOS.</span><br><span class="line"></span><br><span class="line">Let me know.</span><br></pre></td></tr></table></figure>
+<h3 id="音频输出"><a href="#音频输出" class="headerlink" title="音频输出"></a>音频输出</h3><p>Config–DeviceProperties</p>
+<p>此项是用来注入你的设备的，主要是显卡和声卡两部分。同样你也可以定制一些设备到你的 <code>关于本机--系统报告--PCI</code> 列表中，尽管没有多大的意义。</p>
+<p>声卡</p>
+<p>这里首先我们需要确认自己的声卡驱动已经被加载，终端下输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kextstat | grep -E <span class="string">&quot;AppleHDA|AppleALC|Lilu&quot;</span></span><br></pre></td></tr></table></figure>
+<p>我们会得到被加载的驱动，请确保 <code>as.vit9696.Lilu</code>；<code>as.vit9696.AppleALC</code>；<code>com.apple.driver.AppleHDAController</code>；<code>com.apple.driver.AppleHDA</code> 已经被加载。</p>
+<p>找自己声卡的地址，准备好在文章开头要求下载的 <code>gfxutil</code>，将 <code>gfxutil</code> 程序放在桌面，输入:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/desktop/gfxutil -f HDEF //一般来说我们在使用 Applealc 后，板载声卡的部件名都叫 HDEF</span><br></pre></td></tr></table></figure>
+<p>我们输入后会得到声卡的PCI路径，比如我输出的就是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">00:1f.3 8086:a2f0 /PC00@0/HDEF@1F,3 = PciRoot(0x0)/Pci(0x1F,0x3)</span><br></pre></td></tr></table></figure>
+<p>这里我们找到的声卡 PCI 路径为 <code>PciRoot(0x0)/Pci(0x1f,0x3)</code>。我们把预先填写在那里的 <code>PciRoot(0x0)/Pci(0x1b,0x0)</code> 项替换成我们真正的声卡路径。</p>
+<p>后面一段我们看到预先填写的声卡ID为 <code>&lt;01000000&gt;</code>，这里我们需要把它换成合适自己声卡的 ID，输入以下命令得到自己声卡的 CodecID。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ioreg -l|grep IOHDACodecVendorID</span><br></pre></td></tr></table></figure>
+<p>点击<a class="link"   target="_blank" rel="noopener" href="https://github.com/headkaze/Hackintool/blob/master/Resources/Audio/Codecs.plist" >此页面<i class="fas fa-external-link-alt"></i></a>搜索刚得到的CodecID就可查询到自己声卡的型号名称，以及可用的 <code>LayoutID</code>。</p>
+<p>比如我的 CodecID 为 <code>283906408</code>，声卡型号 <code>ALCS1220A</code>，对应 1, 2, 3, 5, 7, 11, 13, 15, 16, 27, 28, 29, 34 的 <code>layout ID</code>。我们需要一个个测试过去，选定自己能用的。这里我们选择 7 这个 ID 进行测试，将 7 转化成 16 进制格式为 07，后面为了满足格式要求添加 6 个 0，则为 <code>07000000</code>，将这个值替换刚才预先填的<code> 01000000</code> 中；如果我们测试 ID 为 27，27 的 16 进制为 1b，补上 6 个 0 则为 <code>1b000000</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PciRoot(0x0)&#x2F;Pci(0x1f,0x3)</span><br><span class="line">        device-id       data      &lt;70a10000&gt; &#x2F;&#x2F;一般情况下这段是不需要填写的，除非你的声卡需要仿冒</span><br><span class="line">        layout-id       data      &lt;0b000000&gt; &#x2F;&#x2F;这个Layout id我瞎写的，你按实际情况写</span><br></pre></td></tr></table></figure>
+<p>如果你测试的ID都无效，请确保你的操作过程正确、并测试用万能声卡(VoodooHDA)补丁来替换 AppleALC 这个补丁。如果都不行，你可能需要自行<a class="link"   target="_blank" rel="noopener" href="https://blog.daliansky.net/Use-AppleALC-sound-card-to-drive-the-correct-posture-of-AppleHDA.html" >编译声卡补丁<i class="fas fa-external-link-alt"></i></a>。</p>
+<p>参考：<a class="link"   target="_blank" rel="noopener" href="https://blog.xjn819.com/post/opencore-guide.html" >2.3 Config–DeviceProperties<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="Mac与Win的差异"><a href="#Mac与Win的差异" class="headerlink" title="Mac与Win的差异"></a>Mac与Win的差异</h2><h3 id="引导方式"><a href="#引导方式" class="headerlink" title="引导方式"></a>引导方式</h3><ul>
+<li><strong>Windows</strong></li>
+</ul>
+<p>主要的系统引导方式有两种：传统的Legacy BIOS 和新型的 UEFI BIOS</p>
+<p><strong><em>Legacy BIOS</em></strong></p>
+<p>无法识别GPT分区表格式</p>
+<p><strong><em>UEFI BIOS</em></strong></p>
+<p>UEFI是一个微型操作系统，放在固件中，能识别FAT文件系统，运行efi程序</p>
+<p>可同时识别MBR分区和GPT分区，都可用于启动操作系统。</p>
+<blockquote>
+<p>Boot Loader：</p>
+<p>对于PC平台来说Boot Loader=BIOS+启动管理器+启动文件+载入程序（IPL+SPL），但是一般指启动管理器及启动设置文件。<br>功能：启动管理器+启动设置文件：提供启动选项，定位、加载并执行SPL。<br>SPL：加载OS内核，SPL只认识自己分区的内核文件。</p>
+</blockquote>
+<p><strong><em>Legacy BIOS+MBR引导原理</em></strong></p>
+<p>引导过程：上电–&gt;Legacy BIOS–&gt;MBR–&gt;DPT–&gt;PBR–&gt; Bootmgr（vista开始）/NTLDR–&gt;BCD（vista开始）/boot.ini–&gt;Winload.exe–&gt;内核加载 –&gt;windows vista/windows xp</p>
+<p><strong><em>UEFI BIOS+GPT 引导原理</em></strong></p>
+<p>引导过程：上电–&gt;UEFI–&gt;GPT分区表–&gt;EFI分区–&gt;\efi\Microsoft\boot\bootmgfw.efi–&gt;efi\Microsoft\BCD→\Windows\system32\winload.efi。</p>
+<ul>
+<li><strong>MacOS</strong></li>
+</ul>
+<p>参考：<br><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/liao20081228/article/details/82591728" >windows引导过程以及多系统引导原理<i class="fas fa-external-link-alt"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://www.jianshu.com/p/26e184605952" >初步了解计算机与操作系统启动原理<i class="fas fa-external-link-alt"></i></a></p>
+<p>[^1]:???遗留笔记  应该没啥大用</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Hackintosh</li>
+        <li>Post author：Leen Yu</li>
+        <li>Create time：2020-12-11 15:30:16</li>
+        <li>
+            Post link：https://yleen.github.io/2020/12/11/Hackintosh/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/12/20/Win&amp;MacSkill/"
+                        >
+                            <span class="left arrow-icon flex-center" >
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Win和Mac~~偷懒技巧~~使用指南</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/12/10/VScodeSkill/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">VScode~~偷懒指南~~使用技巧</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center" >
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                    
+                </main>
+
+            </div>
+
+            <div class="page-main-content-bottom">
+                <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span> -
+            
+            2020 <i class="fas fa-heart icon-animate"></i> <a href="/">Leen Yu</a>
+        </div>
+        
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count <span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a> | Theme <a class="theme-version" target="_blank"></a>
+        </div>
+    </div>
+</footer>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="sidebar-tools">
+        <div class="tools-container">
+    <ul class="tools-list">
+        
+            <li class="search popup-trigger">
+                <i class="fas fa-search"></i>
+            </li>
+        
+
+        
+
+        <!-- TOC aside toggle -->
+        
+
+    </ul>
+</div>
+
+    </div>
+
+    <div class="right-bottom-side-tools">
+        $tools-item-width = 32px;
+$tools-item-font-size = 1.1rem;
+$tools-item-border-radius = 1px;
+
+
+.side-tools-container {
+  position: relative;
+  transition();
+
+  .tools-item {
+    width: $tools-item-width;
+    height: $tools-item-width;
+    font-size: $tools-item-font-size;
+    margin-bottom: 3px;
+    color: var(--second-text-color);
+    background: var(--background-color);
+    cursor: pointer;
+    box-shadow: 1px 1px 3px var(--shadow-color);
+    border-right: none;
+    border-radius: $tools-item-border-radius;
+
+    &:hover {
+      transition();
+      color: var(--background-color);
+      background: var(--primary-color);
+      box-shadow: 2px 2px 6px var(--shadow-color);
+    }
+
+    +keep-tablet() {
+      width: $tools-item-width * 0.9;
+      height: $tools-item-width * 0.9;
+      font-size: $tools-item-font-size * 0.9;
+      margin-bottom: 2px;
+    }
+
+    &.rss {
+
+      a {
+        border-radius: $tools-item-border-radius;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+          transition();
+          color: var(--background-color);
+          background: var(--primary-color);
+          box-shadow: 2px 2px 6px var(--shadow-color);
+        }
+      }
+    }
+  }
+
+
+  .side-tools-list {
+    opacity: 0;
+    transform: translateX(100%);
+    transition();
+
+    .tool-expand-width {
+      +keep-tablet() {
+        display: none;
+      }
+    }
+
+    &.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+}
+
+    </div>
+
+    <!-- page aside -->
+    <aside class="page-aside">
+        
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Issue"><span class="nav-number">1.</span> <span class="nav-text">Issue</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">安装环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">引导介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EFI-%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.</span> <span class="nav-text">EFI 文件结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config-plist%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.2.</span> <span class="nav-text">config.plist介绍</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8E%9F%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">安装原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6"><span class="nav-number">4.1.</span> <span class="nav-text">使用的软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%BC%95%E5%AF%BC%E5%8E%9F%E7%90%86"><span class="nav-number">4.2.</span> <span class="nav-text">系统引导原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%B6%E9%9B%86%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91%E7%BB%8F%E9%AA%8C"><span class="nav-number">5.</span> <span class="nav-text">收集的一些坑经验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">5.1.</span> <span class="nav-text">常见问题及解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MacOS-%E4%B8%8E-Windows-%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4"><span class="nav-number">5.1.1.</span> <span class="nav-text">MacOS 与 Windows 时间不一致</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E6%98%BE%E7%A4%BAAmerican-Megatrends"><span class="nav-number">5.1.2.</span> <span class="nav-text">开机显示American Megatrends</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Open-Core-%E9%BB%98%E8%AE%A4%E9%80%89%E9%A1%B9%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9"><span class="nav-number">5.1.3.</span> <span class="nav-text">Open Core 默认选项无法修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bios-%E9%BB%91%E5%B1%8F-%E5%8F%AF%E6%AD%A3%E5%B8%B8%E8%BF%9B%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.1.4.</span> <span class="nav-text">bios 黑屏 可正常进系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9F%B3%E9%A2%91%E8%BE%93%E5%87%BA"><span class="nav-number">5.1.5.</span> <span class="nav-text">音频输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac%E4%B8%8EWin%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="nav-number">5.2.</span> <span class="nav-text">Mac与Win的差异</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E5%AF%BC%E6%96%B9%E5%BC%8F"><span class="nav-number">5.2.1.</span> <span class="nav-text">引导方式</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        
+    </aside>
+
+    <!-- image viewer -->
+    <div class="image-viewer-container">
+    <div class="img-box">
+        <img src="">
+    </div>
+</div>
+
+
+</div>
+
+
+
+    <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-icon">
+            <i class="fas fa-search"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/local-search.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/left-side-toggle.js"></script>
+
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/code-copy.js"></script>
+    
+
+    
+
+
+</body>
+</html>
