@@ -428,7 +428,8 @@
   <entry>
     <title>Git总结</title>
     <url>/2020/12/02/git/</url>
-    <content><![CDATA[<h1 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch <span class="comment">## 查看当前所在分支</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>[TOC]</p>
+<h1 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch <span class="comment">## 查看当前所在分支</span></span><br></pre></td></tr></table></figure>
 <h2 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch aaa</span><br></pre></td></tr></table></figure>
 <p>建议使用[git switch](#git switch)</p>
 <h2 id="本地分支与远程关联"><a href="#本地分支与远程关联" class="headerlink" title="本地分支与远程关联"></a>本地分支与远程关联</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch --set-upstream-to=origin/&lt;branch Name&gt; &lt;branch Name&gt;</span><br></pre></td></tr></table></figure>
