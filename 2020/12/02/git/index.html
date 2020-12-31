@@ -113,10 +113,14 @@
                         <div class="fade-in-down-animation">
     <div class="article-content-container">
 
+        <!-- <div class="article-title" align="center">
+            <span class="title-hover-animation">Git总结</span>
+        </div> -->
+
         <div class="article-title" align="center">
             <span class="title-hover-animation">Git总结</span>
         </div>
-
+        
         <!-- 自定义 -->
         <div class="meta-info" align="center">
             <div class="article-meta-info">
@@ -354,7 +358,7 @@
 <h1 id="git-其他"><a href="#git-其他" class="headerlink" title="git 其他"></a>git 其他</h1><h2 id="git-add-与-git-add-的区别"><a href="#git-add-与-git-add-的区别" class="headerlink" title="git add . 与 git add * 的区别"></a>git add . 与 git add * 的区别</h2><ul>
 <li>1<br>git add . 按.gitignore规则全部提交。不会提示.gitignore<br>git add * 与add .  不一样的在于会提示已被忽略的内容。</li>
 </ul>
-<p><img src="https://img2020.cnblogs.com/blog/2130168/202009/2130168-20200901152637965-560450371.png"></p>
+<p>![image.png](C:/Users/Lei Yu/OneDrive - bupt.edu.cn/Document/MarkDownImg/2qewiGLZths853p.png)</p>
 <ul>
 <li>2<br>git add .默认添加. 开头的文件  例如.gitignore   git add * 忽略. 开头的文件</li>
 </ul>
@@ -506,9 +510,9 @@
 <p><strong>Warning</strong>: You <strong>should not</strong> use the <code>--allow-unrelated-histories</code> flag unless you know what unrelated history is and are sure you need it. The check was introduced just to prevent disasters when people merge unrelated projects by mistake.</p>
 <p><em>As far as I understand</em>, in your case <strong>has happened the following</strong>:</p>
 <p>You have cloned a project at some point <code>1</code>, and made some development to point <code>2</code>. Meanwhile, project has evolved to some point <code>3</code>.</p>
-<p><a target="_blank" rel="noopener" href="https://i.stack.imgur.com/Quqzj.png"><img src="/../../MarkDownImg/Quqzj.png" alt="Enter image description here"></a></p>
+<p><img src="https://i.loli.net/2020/12/31/46K8hvcb2szfDei.png" alt="image.png"></p>
 <p>Then you for some reason lost your local .git subdirectory - which contained all your history from <code>1</code> to <code>2</code>. You managed to restore the current state though.</p>
-<p><a target="_blank" rel="noopener" href="https://i.stack.imgur.com/UqtRi.png"><img src="/../../MarkDownImg/UqtRi.png" alt="Enter image description here"></a></p>
+<p><img src="https://i.loli.net/2020/12/31/lHrdIohY27LnQuR.png" alt="image.png"></p>
 <p>But now it does not have any history - it looks like the whole project has appeared out of nowhere. If you ask Git to merge them it will not be able to say where your changes are, so it can add them to remote project, as far as I understand it will just report massive add/add conflicts.</p>
 <p><strong>You should</strong> now find back that commit <code>1</code> from the remote history where you have cloned the project (I assume you did not pull after that; if you did then you should instead look for the last commit you have pulled). Then you should modify your history so that is starts from that commit 1, and then Git will be able to merge correctly (with pull for example).</p>
 <p>So, the steps (assuming you are now in your restored commit without history):</p>
@@ -517,7 +521,7 @@
 <li>run <code>git diff _1?_..HEAD</code>, and read carefully. Make sure that the difference contains only edits which you have made. If it contains more then you should have picked a bit wrong <code>1?</code> and need to adjust it and repeat this step</li>
 <li>after you have found the commit <code>1</code>. You should make it your parent; do <code>git --reset --soft _1_</code>, and then <code>git commit</code>.</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://i.stack.imgur.com/nI6fA.png"><img src="/../../MarkDownImg/nI6fA.png" alt="Enter image description here"></a></p>
+<p><img src="https://i.loli.net/2020/12/31/OY9r8AGXcPMBVUe.png" alt="image.png"></p>
 <p>Now it looks like you have cloned from <code>1</code>, then made one commit with all your changes. Your intermediate history is lost anyway with your older <code>.git</code> directory, but now you can run your <code>git pull</code> - it will merge correctly.</p>
 <h1 id="gitignore用法"><a href="#gitignore用法" class="headerlink" title=".gitignore用法"></a>.gitignore用法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 忽略 .a 文件</span><br><span class="line">*.a</span><br><span class="line"># 但否定忽略 lib.a, 尽管已经在前面忽略了 .a 文件</span><br><span class="line">!lib.a</span><br><span class="line"># 仅在当前目录下忽略 TODO 文件， 但不包括子目录下的 subdir&#x2F;TODO</span><br><span class="line">&#x2F;TODO</span><br><span class="line"># 忽略 build&#x2F; 文件夹下的所有文件</span><br><span class="line">build&#x2F;</span><br><span class="line"># 忽略 doc&#x2F;notes.txt, 不包括 doc&#x2F;server&#x2F;arch.txt</span><br><span class="line">doc&#x2F;*.txt</span><br><span class="line"># 忽略所有的 .pdf 文件 在 doc&#x2F; directory 下的</span><br><span class="line">doc&#x2F;**&#x2F;*.pdf</span><br></pre></td></tr></table></figure>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/github/gitignore" >模板<i class="fas fa-external-link-alt"></i></a></p>
@@ -596,13 +600,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2020/12/10/VScodeSkill/"
+                           href="/2020/12/11/Hackintosh/"
                         >
                             <span class="left arrow-icon flex-center" >
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">VScode~~偷懒指南~~使用技巧</span>
+                                <span class="post-nav-title-item">Hackintosh</span>
                                 <span class="post-nav-item">Prev posts</span>
                             </span>
                         </a>
@@ -677,77 +681,44 @@
     </div>
 
     <div class="right-bottom-side-tools">
-        $tools-item-width = 32px;
-$tools-item-font-size = 1.1rem;
-$tools-item-border-radius = 1px;
+        <div class="side-tools-container">
 
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
 
-.side-tools-container {
-  position: relative;
-  transition();
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
 
-  .tools-item {
-    width: $tools-item-width;
-    height: $tools-item-width;
-    font-size: $tools-item-font-size;
-    margin-bottom: 3px;
-    color: var(--second-text-color);
-    background: var(--background-color);
-    cursor: pointer;
-    box-shadow: 1px 1px 3px var(--shadow-color);
-    border-right: none;
-    border-radius: $tools-item-border-radius;
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
 
-    &:hover {
-      transition();
-      color: var(--background-color);
-      background: var(--primary-color);
-      box-shadow: 2px 2px 6px var(--shadow-color);
-    }
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
 
-    +keep-tablet() {
-      width: $tools-item-width * 0.9;
-      height: $tools-item-width * 0.9;
-      font-size: $tools-item-font-size * 0.9;
-      margin-bottom: 2px;
-    }
+        <!-- rss -->
+        
 
-    &.rss {
+        <li class="tools-item tool-scroll-to-top flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </li>
 
-      a {
-        border-radius: $tools-item-border-radius;
-        width: 100%;
-        height: 100%;
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
 
-        &:hover {
-          transition();
-          color: var(--background-color);
-          background: var(--primary-color);
-          box-shadow: 2px 2px 6px var(--shadow-color);
-        }
-      }
-    }
-  }
+    <ul class="tools-ul-1">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
 
-
-  .side-tools-list {
-    opacity: 0;
-    transform: translateX(100%);
-    transition();
-
-    .tool-expand-width {
-      +keep-tablet() {
-        display: none;
-      }
-    }
-
-    &.show {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-}
+    </ul>
+</div>
 
     </div>
 
