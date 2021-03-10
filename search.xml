@@ -428,8 +428,7 @@
   <entry>
     <title>Git总结</title>
     <url>/2020/12/02/git/</url>
-    <content><![CDATA[<p>[TOC]</p>
-<h1 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch <span class="comment">## 查看当前所在分支</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch <span class="comment">## 查看当前所在分支</span></span><br></pre></td></tr></table></figure>
 <h2 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch aaa</span><br></pre></td></tr></table></figure>
 <p>建议使用[git switch](#git switch)</p>
 <h2 id="本地分支与远程关联"><a href="#本地分支与远程关联" class="headerlink" title="本地分支与远程关联"></a>本地分支与远程关联</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch --set-upstream-to=origin/&lt;branch Name&gt; &lt;branch Name&gt;</span><br></pre></td></tr></table></figure>
@@ -790,6 +789,23 @@
 ]]></content>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SDK接入问题</title>
+    <url>/2021/01/07/AndroidSDK/</url>
+    <content><![CDATA[<h2 id="1-1-Android-SDK-问题"><a href="#1-1-Android-SDK-问题" class="headerlink" title="1.1   Android SDK 问题"></a>1.1   Android SDK 问题</h2><h3 id="1-1-1-Android-SDK-及-NDK安装及路径问题"><a href="#1-1-1-Android-SDK-及-NDK安装及路径问题" class="headerlink" title="1.1.1   Android SDK 及 NDK安装及路径问题"></a>1.1.1   Android SDK 及 NDK安装及路径问题</h3><p>报错如下</p>
+<p>![img](C:/Users/Lei Yu/OneDrive - bupt.edu.cn/Document/MarkDownImg/clip_image002.jpg)</p>
+<p>解决方法</p>
+<p>AndroidSDK与NDK路径需尽量短，否则会报无法识别路径错误，这是个大坑。</p>
+<h3 id="1-1-2-AndroidSDK与发布版本匹配问题"><a href="#1-1-2-AndroidSDK与发布版本匹配问题" class="headerlink" title="1.1.2   AndroidSDK与发布版本匹配问题"></a>1.1.2   AndroidSDK与发布版本匹配问题</h3><p>报错如下</p>
+<p>![img](C:/Users/Lei Yu/OneDrive - bupt.edu.cn/Document/MarkDownImg/clip_image004.jpg)</p>
+<p>解决方法</p>
+<p>首先需要将SDK与预发布版本相对应，一般情况下应该安装不同版本的SDK。之后需要在SDK路径下的tools/bin 执行命令./sdkmanager.bat –licenses</p>
+]]></content>
+      <tags>
+        <tag>SDK</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
 </search>
